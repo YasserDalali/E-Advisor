@@ -4,6 +4,5 @@
     .primary {background-color: blueviolet}
     .btn-primary {background-color: blueviolet}
     .btn-primary {background-color: blueviolet}
-
 </style>
 

@@ -1,0 +1,69 @@
+:root {
+    --primary-color: hsla(227, 100%, 84%, 1);
+    --secondary-color: hsla(285, 100%, 84%, 1);
+    --tertiary-color: hsla(287, 100%, 87%, 1);
+}
+
+
+.grad-primary {
+    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 66%, var(--tertiary-color) 100%);
+    background: -moz-linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 66%, var(--tertiary-color) 100%);
+    background: -webkit-linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 66%, var(--tertiary-color) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ABBDFF", endColorstr="#EBAFFF", GradientType=1);
+}
+
+/* ?================================================== 
+    !-------| |> HEADER
+   ?================================================== */
+   
+   @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+
+* {
+    font-family: "Unbounded";
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+#welcome_message {
+    font-size: 1.5rem;
+}
+
+.icon_section {
+    color: rgb(31, 31, 31);
+    background-color: white;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_section img {
+    border-radius: 50%;
+    width: 30px;
+}
+
+/* ?================================================== 
+    !-------| |> MAIN SECTION
+   ?================================================== */
+main {margin: 0 2rem;}
+
+article {
+    padding: 2rem;
+    color: black;
+    font-weight: bold;
+    border-radius: 1rem;
+}

@@ -17,7 +17,14 @@ session_start();
 
 <body>
 
-    <?php include "header.php"; ?>
+<style>@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+* {
+    font-family: "Unbounded";
+    font-weight: 400;
+}
+
+</style>
 
     <header>
         <div id="welcome_message">
@@ -32,17 +39,52 @@ session_start();
 
 
     <main>
-        <article class="grad-primary">
-            <div class="wallet_card ">
-                <p>Your index</p>
+        <article class="wallet_card grad-primayr">
+                <div class="dflex">
+                <p>Your score:</p>
+                <img src="../design/icons/light-icon.svg" alt="" width="25px">
+                </div>
                 <h1>4.8</h1>
-            </div>
+                <small>(Above average)</small>
+        </article>
+        
+        <article class="important-kpi">
+            <h2>
+              Important <strong>KPIs</strong> <i class="fas fa-arrow-right"></i>
+            </h2>
+
+            <section>
+            <?php $_SESSION['mail'];
+            include_once "../classes/kpi.class.php"; 
+                    $kpi = new KPICalculator; ?>
+<div class="dflex">
+<article class=" grad-secondary wallet_card_kpi">
+                <div class="dflex">
+                <p>Your debt to income ratio:</p>
+                </div>
+                <h1><?php echo $kpi->DTI(4000, 5000). "%";?></h1>
+                <small>(Above average)</small>
+
+</article>
+<article class=" grad-secondary wallet_card_kpi">
+                <div class="dflex">
+                <p>Your saving rate score::</p>
+                </div>
+                <h1>                    <?php echo $kpi->SavingsRate(4000, 1000). "%" ?></h1>
+                <small>(Above average)</small>
+
+</article>
+
+
+
+
+</div>         </section>
         </article>
     </main>
 
 
     <style>
-        <?php include "style.css";    ?>
+        <?php include "../design/style.css"; ?>
     </style>
 </body>
 
